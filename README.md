@@ -14,14 +14,14 @@
 
 - 请直接提 issue 来增加需要添加的新功能或单词列表
 
-## Get Started
+## 本地化部署 Get Started
 
-1. Install Ruby: `brew install ruby`
-2. Install Bundler globally: `sudo gem install bundler --no-user-install`
-3. Clone the repo
-4. Install dependencies: `bundle install`
-5. Launch the project from local server: `bundle exec jekyll serve`
-6. Visit `http://127.0.0.1:4000`
+1. Install Ruby: `brew install ruby` # 安装 Ruby
+2. Install Bundler globally: `sudo gem install bundler --no-user-install` # 安装 bundler
+3. Clone the repo # 克隆仓库
+4. Install dependencies: `bundle install`  # 安装依赖
+5. Launch the project from local server: `bundle exec jekyll serve` # 启动
+6. Visit `http://127.0.0.1:4000` # 访问
 
 ## Anki 记忆卡片
 
