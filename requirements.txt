@@ -1,0 +1,4 @@
+requests
+genanki
+tqdm
+beautifulsoup4

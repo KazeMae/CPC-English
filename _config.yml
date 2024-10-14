@@ -1,0 +1,17 @@
+name: Anyway.ABC
+permalink: /:title
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - CNAME
+  - README.md
+  - package.json
+  - package-lock.json
+  - LICENSE
+  - gulpfile.js

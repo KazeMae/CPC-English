@@ -1,0 +1,32 @@
+name: Build & Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # 或你希望触发部署的其他分支
+
+jobs:
+  master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: gulp
+
+      # Use GitHub Actions' cache to shorten build times and decrease load on servers
+      - uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      # Build Jekyll
+      - name: build jekyll
+        uses: lemonarc/jekyll-action@1.0.0
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 自动提供的 GitHub Token
+          publish_dir: ./_site  # Jekyll 默认输出目录
