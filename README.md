@@ -4,11 +4,32 @@
 
 官网：http://english.scpc.team/
 
-## 贡献
+## 贡献 
 
 - 如发现有错误翻译，或者更合适的翻译，也可以通过 Pull Request 来更新列表（单词列表在 `_posts` 文件夹里）
 - 请按照单词首字母顺序进行更新
 - 单词首字母请小写，翻译请使用中文标点符号
+- 请进入 `_post` 文件夹，添加一个 `.md` 文件以记录单词，格式见下
+- 格式:
+  - 命名为:`日期-单词.md`, eg:`2020-01-01-analogy.md`, 短语词组中的空格请使用 `-` 替换
+  - 一个 `.md` 文件只能记录一个单词
+  - 文件内部格式:
+    ```
+    ---
+    word: analogy
+    meaning: 类比，比喻
+    correct: /əˈnælədʒi/
+    note:
+    category: 名词
+    ---
+    ```
+    - `word`: 单词
+    - `meaning`: 翻译
+    - `correct`: 音标
+    - `note`: 实例应用
+    - `category`: 词性/组别
+    - 上下的 `---` 是必须的，特殊符号请使用中文符号
+- 提交 PR 教程：[MAA-纯网页端 PR 教程](https://maa.plus/docs/zh-cn/develop/pr-tutorial.html)
 
 ## Feature Request
 
